@@ -1,17 +1,19 @@
-# LLM_Optimization
-This Repo constains all the work I have done using Large Language Models
+# LLM Optimization
 
-- LLM_arch.pdf contains a basic presentation I gave to my professor, introducing LLM Architecture.
-- LLM_Reqs.pdf contains another presentation I gave discussing the limits when running LLMs (memory and computation bound). This goes into detail on the different stages of an LLM (prefill, decode), and also goes into some detail of using Roofline Models.
+This repository contains my work on optimizing Large Language Models (LLMs), focusing on improving efficiency, reducing computational load, and making fine-tuning more accessible for diverse applications. Below is an outline of the contents and goals of each component.
 
-## Sparse Low Rank Activation 
- - LoRA directory
+## Contents
 
-The goal of this project was to simplify and speed up the process of fine-tuning large language models (LLMs), so that more people, even those without powerful computing resources, can adapt these models to their own specific tasks. By making this process more efficient, the aim was to help researchers and developers easily customize LLMs for real-world applications without needing high-end hardware. My approach was to explore ways to reduce the computational burden of fine-tuning while maintaining high accuracy, focusing on optimizing the LoRA (Low-Rank Adaptation) method.
- 
-I implemented LoRA with the Lottery Ticket Hypothesis, which reduced the number of parameters needed for fine-tuning large language models.
+### 1. Presentations
+- **[LLM_arch.pdf](LLM_arch.pdf)**: An introductory presentation on LLM architecture, covering foundational concepts and architecture basics presented to my professor.
+- **[LLM_Reqs.pdf](LLM_Reqs.pdf)**: A detailed presentation on the computational and memory constraints encountered when running LLMs. This presentation explores each stage of LLM inference (e.g., prefill and decoding) and introduces Roofline Models for analyzing performance.
 
-## Testing Computation and Memory Bounds
-This a recently started project, where I aimed to find the computation/memory bounds while running LLMs (inference, training, fine-tuning) and figure out if there is a way to allieviate that. 
+### 2. Sparse Low-Rank Adaptation (LoRA)
+- **LoRA Directory**: Contains code and resources for implementing LoRA with the Lottery Ticket Hypothesis. 
 
-I have been testing different methods of fine-tuning to see the efficiency of these methods. (Testing_bounds/RoBERTa_ft)
+The goal of this project was to streamline and accelerate the fine-tuning process for LLMs, making it accessible even for those without high-end hardware. By optimizing the LoRA (Low-Rank Adaptation) method, I aimed to reduce the computational demands of fine-tuning while maintaining model accuracy. This work intends to help researchers and developers quickly adapt LLMs to specific tasks, facilitating real-world applications without requiring extensive computational resources.
+
+### 3. Testing Computation and Memory Bounds
+- **Testing_bounds/RoBERTa_ft**: A directory for experiments focused on measuring the computation and memory requirements of various fine-tuning techniques, particularly with RoBERTa.
+
+This ongoing project investigates the computational and memory limits associated with LLM tasks such as inference, training, and fine-tuning. I am experimenting with different fine-tuning methods to evaluate their efficiency and explore ways to alleviate hardware constraints.
