@@ -17,3 +17,13 @@ The goal of this project was to streamline and accelerate the fine-tuning proces
 - **Testing_bounds/RoBERTa_ft**: A directory for experiments focused on measuring the computation and memory requirements of various fine-tuning techniques, particularly with RoBERTa.
 
 This ongoing project investigates the computational and memory limits associated with LLM tasks such as inference, training, and fine-tuning. I am experimenting with different fine-tuning methods to evaluate their efficiency and explore ways to alleviate hardware constraints.
+
+### 4. Cost Modelling the Fine-Tuning Task
+- **Cost_modelling/LLM_ft_setup**: This project is an ongoing research effort to compare different fine-tuning strategies for large language models under equal time and cost constraints.
+Currently, it supports experiments with full fine-tuning and LoRA-based fine-tuning on the IMDb sentiment classification task using distilbert-base-uncased.
+  - **Key features:**
+Tracks training time, memory usage (CPU/GPU), and evaluation accuracy
+Uses Weights & Biases (wandb) for experiment logging and comparison
+Provides a cost extrapolation table based on cloud GPU pricing
+Further development will include support for QLoRA, more tasks, and deeper analyses across models and hardware.
+- **Cost_modelling/HP_tuning**: This notebook benchmarks different hyperparameter tuning algorithms (e.g. grid search, random search, Optuna) to evaluate which method finds optimal fine-tuning parameters most efficiently. The main goal is to track convergence speed. This notebook benchmarks different hyperparameter tuning algorithms (e.g. grid search, random search, Optuna) to evaluate which method finds optimal fine-tuning parameters most efficiently.
